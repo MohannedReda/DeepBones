@@ -1,7 +1,7 @@
 
   // صور الخلفية
   const images = [
-    "url('img/landing-1.jpg')",
+   
     "url('img/landing-2.jpg')",
     "url('img/landing.jpg')",
   ];
