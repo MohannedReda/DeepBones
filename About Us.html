@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasper</title>
+    <!-- norrmalize css file to render element -->
+    <link rel="stylesheet" href="css/normaalize.css">
+    <!-- style link -->
+    <link rel="stylesheet" href="css/stye.css">
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+            <nav>
+                <i class="fa-solid fa-bars menu"></i>
+                <ul>
+                    <li><a class="active" href="tourism_website_updated.html">Home</a></li>
+               
+                    <li><a href="tourism_website_updated.html">About Us</a></li>
+                    <li><a href="About Us.html">Scan</a></li>
+                    
+
+                </ul>
+             
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Start About -->
+    <div class="about" id="about">
+   
+                    <!-- ===== Scan Section: Step 1 (Upload) ===== -->
+
+
+        <section id="scan-upload" class="upload-section">
+        <h2> Upload Your X-ray</h2>
+        <p>Please upload your X-ray image to start the analysis.</p>
+    
+        <!-- Upload Box -->
+        
+        <div class="upload-box">
+        <i class="fas fa-dna fa-3x upload-icon"></i>
+        <p class="upload-text">Drag & Drop your file here <br>or</p>
+        <label for="xray-upload" class="upload-btn">
+            Choose File
+        </label>
+        <input type="file" id="xray-upload" name="xray-upload" accept=".jpg,.jpeg,.png,.dcm" hidden>
+        <p class="upload-hint">Accepted formats: JPG, PNG, DICOM</p>
+        </div>
+        </section>
+    
+        <!-- CSS -->
+        <style>
+        .upload-section {
+        padding: 60px 20px;
+        text-align: center;
+        background: #f9f9f9;
+        }
+    
+        .upload-section h2 {
+        color: #0B2C4D;
+        font-size: 28px;
+        margin-bottom: 10px;
+        }
+    
+        .upload-section p {
+        color: #333;
+        margin-bottom: 20px;
+        }
+    
+        .upload-box {
+        border: 2px dashed #0B2C4D;
+        border-radius: 15px;
+        padding: 40px;
+        max-width: 500px;
+        margin: 0 auto;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+        }
+    
+        .upload-box:hover {
+        background: #f1f7fc;
+        box-shadow: 0 4px 15px rgba(11,44,77,0.2);
+        }
+    
+        .upload-icon {
+        color: #0B2C4D;
+        margin-bottom: 15px;
+        }
+    
+        .upload-text {
+        color: #444;
+        margin: 10px 0;
+        }
+    
+        .upload-btn {
+        display: inline-block;
+        background: #0B2C4D;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+        }
+    
+        .upload-btn:hover {
+        background: #093058;
+        }
+    
+        .upload-hint {
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+        }
+        </style>
+  
+    </div>
+  
+
+    <div>
+        <section id="patient-info" class="info-section">
+            <h2>Patient Information</h2>
+            <p>Please provide your personal and medical details.</p>
+          
+            <div class="info-box">
+              <!-- Personal Information -->
+              <label for="age">Age</label>
+              <select id="age" name="age">
+                <option disabled selected>Select Age</option>
+                <option>Under 18</option>
+                <option>18–30</option>
+                <option>31–50</option>
+                <option>51+</option>
+              </select>
+          
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option disabled selected>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+          
+              <label for="athlete">Are you an athlete?</label>
+              <select id="athlete" name="athlete">
+                <option disabled selected>Select Option</option>
+                <option>Yes – Professional</option>
+                <option>Yes – Amateur</option>
+                <option>No</option>
+              </select>
+          
+              <!-- Chief Complaint -->
+              <label for="symptom">Main Symptom</label>
+              <select id="symptom" name="symptom" multiple>
+                <option>Pain</option>
+                <option>Swelling</option>
+                <option>Weakness</option>
+                <option>Other</option>
+              </select>
+          
+              <label for="duration">Duration of symptoms</label>
+              <select id="duration" name="duration">
+                <option disabled selected>Select Duration</option>
+                <option><1 week</option>
+                <option>1–4 weeks</option>
+                <option>1–3 months</option>
+                <option>>3 months</option>
+              </select>
+          
+              <label for="severity">Pain Severity (0–10)</label>
+              <select id="severity" name="severity">
+                <option disabled selected>Select Severity</option>
+                <option>0–2 (Mild)</option>
+                <option>3–5 (Moderate)</option>
+                <option>6–8 (Severe)</option>
+                <option>9–10 (Very Severe)</option>
+              </select>
+          
+              <!-- Apply Button -->
+              <button type="submit" class="apply-btn">Apply</button>
+            </div>
+          </section>
+          
+          <!-- CSS -->
+          <style>
+          .info-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f9f9f9;
+          }
+          
+          .info-section h2 {
+            color: #0B2C4D;
+            font-size: 28px;
+            margin-bottom: 10px;
+          }
+          
+          .info-section p {
+            color: #333;
+            margin-bottom: 20px;
+          }
+          
+          .info-box {
+            border: 2px dashed #0B2C4D;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            text-align: left;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .info-box:hover {
+            background: #f1f7fc;
+            box-shadow: 0 4px 15px rgba(11,44,77,0.2);
+          }
+          
+          .info-box label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #0B2C4D;
+            font-weight: bold;
+          }
+          
+          .info-box select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+          
+          .info-box select:focus {
+            border-color: #0B2C4D;
+            outline: none;
+          }
+          
+          /* Apply Button */
+          .apply-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #0B2C4D;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+          }
+          
+          .apply-btn:hover {
+            background: #093058;
+          }
+          </style>
+          
+
+    </div>
+ 
+    <div>
+        
+        <!-- Results Section -->
+<section id="results" class="info-section">
+  <h2>Scan Results</h2>
+  <p>The analysis output from the AI model will appear below.</p>
+
+  <div class="info-box">
+    <label>Diagnosis:</label>
+    <div class="output-box" id="diagnosis-output">
+      <!-- Model will insert result here -->
+      Waiting for analysis...
+    </div>
+
+    <label>Confidence Level:</label>
+    <div class="output-box" id="confidence-output">
+      <!-- Model will insert confidence -->
+      ---
+    </div>
+  </div>
+</section>
+
+<!-- Advice Section -->
+<section id="advice" class="info-section">
+  <h2>Advice & Recommendations</h2>
+  <p>Personalized advice generated by the AI model will be displayed here.</p>
+
+  <div class="info-box">
+    <label>Recommended Steps:</label>
+    <div class="output-box" id="advice-output">
+      <!-- Model will insert advice here -->
+      No advice yet.
+    </div>
+
+    <label>Urgency Level:</label>
+    <div class="output-box" id="urgency-output">
+      <!-- Model will insert urgency -->
+      ---
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.info-section {
+  padding: 60px 20px;
+  /* margin-top: var(--section-padding); */
+  margin-bottom: var(--section-padding);
+  /* padding-bottom: var(--section-padding); */
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.info-section h2 {
+  color: #0B2C4D;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.info-section p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  border: 2px dashed #0B2C4D;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-box:hover {
+  background: #f1f7fc;
+  box-shadow: 0 4px 15px rgba(11,44,77,0.2);
+}
+
+.info-box label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #0B2C4D;
+  font-weight: bold;
+}
+
+.output-box {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fdfdfd;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+</style>
+
+</div>
+      
+<!-- Footer Section -->
+<footer class="footer">
+    <p>© 2025 Deep Bone Project. All Rights Reserved.</p>
+  </footer>
+  
+  <!-- CSS -->
+  <style>
+  .footer {
+    background: #0B2C4D;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  
+  .footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  </style>
+  
+ 
+
+
+    <script src="main2.js"></script>
+    <!--End Quote  -->
+    
